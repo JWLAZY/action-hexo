@@ -10,6 +10,7 @@ LABEL com.github.actions.description="Wraps the hexo CLI to enable common hexo c
 LABEL com.github.actions.icon="package"
 LABEL com.github.actions.color="red"
 
+RUN echo "deb http://security.debian.org/debian-security bullseye-security main contrib non-free" > /etc/apt/sources.list
 RUN apt-get update && \
     apt-get install -y git-core
 
