@@ -12,7 +12,7 @@ LABEL com.github.actions.color="red"
 
 RUN echo "deb http://security.debian.org/debian-security bullseye-security main contrib non-free" > /etc/apt/sources.list
 RUN apt-get update && \
-    apt-get install -y aptitude libpcre2-dev git-core
+    apt-get install -y aptitude libpcre2-8-0 git-core
 
 RUN npm install -g hexo hexo-deployer-git
 
