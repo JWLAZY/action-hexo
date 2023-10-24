@@ -15,7 +15,7 @@ ADD ./source.list /etc/apt/sources.list
 RUN apt-get clean && apt-get autoremove && apt-get update && \
     apt-get install -y aptitude libpcre2-8-0 git-core
 
-RUN npm install -g hexo hexo-deployer-git
+RUN npm install -g hexo
 
 COPY "entrypoint.sh" "/entrypoint.sh"
 RUN chmod +x /entrypoint.sh
