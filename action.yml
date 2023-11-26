@@ -1,4 +1,4 @@
-name: 'GitHub Action for Hexo'
+name: 'GitHub Action for Hexo use aliyun source'
 description: 'Wraps the hexo CLI to enable common hexo commands.'
 author: 'heowc'
 runs:
