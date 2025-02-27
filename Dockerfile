@@ -1,4 +1,4 @@
-FROM node:10
+FROM node:11
 
 LABEL version="1.0.2"
 LABEL repository="http://github.com/heowc/action-hexo"
@@ -9,7 +9,7 @@ LABEL com.github.actions.name="GitHub Action for hexo"
 LABEL com.github.actions.description="Wraps the hexo CLI to enable common hexo commands."
 LABEL com.github.actions.icon="package"
 LABEL com.github.actions.color="red"
-
+RUN sudo chown -R 65534:0 "/root/.npm"
 
 RUN npm install -g hexo
 
