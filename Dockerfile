@@ -1,4 +1,4 @@
-FROM dockette/nodejs
+FROM node
 
 LABEL version="1.0.2"
 LABEL repository="http://github.com/heowc/action-hexo"
