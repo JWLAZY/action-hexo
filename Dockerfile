@@ -9,7 +9,7 @@ LABEL com.github.actions.name="GitHub Action for hexo"
 LABEL com.github.actions.description="Wraps the hexo CLI to enable common hexo commands."
 LABEL com.github.actions.icon="package"
 LABEL com.github.actions.color="red"
-RUN sudo chown -R 65534:0 "/root/.npm"
+
 
 USER root
 RUN npm config set user 0
