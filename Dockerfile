@@ -1,4 +1,4 @@
-FROM node:11
+FROM node:10
 
 LABEL version="1.0.2"
 LABEL repository="http://github.com/heowc/action-hexo"
@@ -11,6 +11,9 @@ LABEL com.github.actions.icon="package"
 LABEL com.github.actions.color="red"
 RUN sudo chown -R 65534:0 "/root/.npm"
 
+USER root
+RUN npm config set user 0
+RUN npm config set unsafe-perm true
 RUN npm install -g hexo
 
 COPY "entrypoint.sh" "/entrypoint.sh"
