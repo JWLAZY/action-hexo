@@ -1,4 +1,4 @@
-FROM swethark/centosnodejs
+FROM dockette/nodejs
 
 LABEL version="1.0.2"
 LABEL repository="http://github.com/heowc/action-hexo"
@@ -11,7 +11,7 @@ LABEL com.github.actions.icon="package"
 LABEL com.github.actions.color="red"
 
 
-RUN npm install --unsafe-perm -g hexo
+RUN npm install -g hexo
 
 COPY "entrypoint.sh" "/entrypoint.sh"
 RUN chmod +x /entrypoint.sh
