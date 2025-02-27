@@ -12,8 +12,10 @@ LABEL com.github.actions.color="red"
 
 RUN mv /etc/apt/sources.list /etc/apt/sources.list.bak
 ADD ./source.list /etc/apt/sources.list
-RUN apt-get clean && apt-get autoremove && apt-get update && \
-    apt-get install -y aptitude libpcre2-8-0 git-core
+RUN apt-get clean 
+RUN apt-get autoremove
+RUN apt-get update 
+RUN apt-get install -y aptitude libpcre2-8-0 git-core
 
 RUN npm install --unsafe-perm -g hexo
 
